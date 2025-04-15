@@ -19,18 +19,7 @@ const ProjectsCarousel = () => {
       title: "Oasis Infobyte",
       description: "Interactive web apps built during internship.",
     },
-    {
-      title: "Oasis Infobyte",
-      description: "Interactive web apps built during internship.",
-    },
-    {
-      title: "Oasis Infobyte",
-      description: "Interactive web apps built during internship.",
-    },
-    {
-      title: "Oasis Infobyte",
-      description: "Interactive web apps built during internship.",
-    },
+    // ... other projects
   ];
 
   const carouselRef = useRef(null);
@@ -39,8 +28,8 @@ const ProjectsCarousel = () => {
   });
 
   return (
-    <section className="py-12 bg-pink-50">
-      <h2 className="text-3xl font-bold text-center mb-6 text-pink-700">
+    <section className="py-12 bg-pink-50 dark:bg-mutedColor">
+      <h2 className="text-3xl font-bold text-center mb-6 text-pink-700 ">
         My Projects
       </h2>
       <div
@@ -51,12 +40,12 @@ const ProjectsCarousel = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="min-w-[300px] h-[200px] flex-shrink-0 rounded-xl bg-white shadow-md scroll-snap-align-start p-4 transition-transform duration-300"
+            className="min-w-[300px] h-[200px] flex-shrink-0 rounded-xl bg-white  shadow-md  dark:bg-muted-foreground scroll-snap-align-start p-4 transition-transform duration-300"
             style={{
               transform: `translateX(${scrollX.get() * 0.2}px)`,
             }}
           >
-            <h3 className="text-xl font-semibold text-pink-600">
+            <h3 className="text-xl font-semibold text-pink-600 ">
               {project.title}
             </h3>
             <p className="text-gray-500 text-sm mt-2">{project.description}</p>

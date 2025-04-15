@@ -17,20 +17,20 @@ const NavBar = () => {
     <header className="fixed top-0 left-0 w-full bg-[#fef6f9] dark:bg-[#1a1a1a] shadow z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Left - Logo */}
-        <h1 className="text-xl font-bold text-text dark:text-white">
+        <h1 className="text-xl font-bold text-textColor dark:text-textColor">
           SiwaGrace
         </h1>
 
         {/* Center - Navigation */}
         <nav className="flex items-center gap-6 text-sm text-gray-700 dark:text-gray-200">
-          <a href="#home" className="hover:text-text">
+          <a href="#home" className="hover:text-textColor">
             Home
           </a>
-          <a href="#about" className="hover:text-text">
+          <a href="#about" className="hover:text-textColor">
             About
           </a>
           <DropdownMenu>
-            <DropdownMenuTrigger className="hover:text-text">
+            <DropdownMenuTrigger className="hover:text-textColor">
               Projects
             </DropdownMenuTrigger>
             <DropdownMenuContent className="bg-white dark:bg-[#2a2a2a] text-gray-800 dark:text-white">
@@ -42,7 +42,7 @@ const NavBar = () => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <a href="#contact" className="hover:text-text">
+          <a href="#contact" className="hover:text-textColor">
             Contact
           </a>
         </nav>
@@ -59,8 +59,8 @@ const NavBar = () => {
             />
             <Moon className="w-4 h-4 text-blue-500" />
           </div>
-          <Button className="bg-text hover:bg-[#ff85c1] text-white rounded-xl px-4 py-2">
-            <a href="/resume.pdf" download>
+          <Button className="bg-textColor hover:bg-[#ff85c1] text-white rounded-xl px-4 py-2">
+            <a href="../assets/GraceEsimeDjobokouResume.pdf" download>
               Download CV
             </a>
           </Button>
