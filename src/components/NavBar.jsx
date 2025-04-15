@@ -8,10 +8,10 @@ import {
   DropdownMenuItem,
 } from "./ui/dropdown-menu";
 import { Moon, Sun } from "lucide-react";
-// import { useTheme } from "next-themes";
+import { useTheme } from "next-themes";
 
 const NavBar = () => {
-  // const { setTheme, theme } = useTheme();
+  const { setTheme, theme } = useTheme();
 
   return (
     <header className="fixed top-0 left-0 w-full bg-[#fef6f9] dark:bg-[#1a1a1a] shadow z-50">
@@ -22,7 +22,7 @@ const NavBar = () => {
         </h1>
 
         {/* Center - Navigation */}
-        <nav className="hidden md:flex items-center gap-6 text-sm text-gray-700 dark:text-gray-200">
+        <nav className="flex items-center gap-6 text-sm text-gray-700 dark:text-gray-200">
           <a href="#home" className="hover:text-text">
             Home
           </a>
@@ -49,7 +49,7 @@ const NavBar = () => {
 
         {/* Right - Dark mode toggle & CV button */}
         <div className="flex items-center gap-4">
-          {/* <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <Sun className="w-4 h-4 text-yellow-400" />
             <Switch
               checked={theme === "dark"}
@@ -58,7 +58,7 @@ const NavBar = () => {
               }
             />
             <Moon className="w-4 h-4 text-blue-500" />
-          </div> */}
+          </div>
           <Button className="bg-text hover:bg-[#ff85c1] text-white rounded-xl px-4 py-2">
             <a href="/resume.pdf" download>
               Download CV

@@ -1,11 +1,11 @@
 import React from "react";
-
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
 } from "react-router-dom";
+import { ThemeProvider } from "./components/theme-provider"; // You'll need to create this
 import RootLayout from "./layout/RootLayout";
 import Home from "./Pages/Home";
 // import About from "./Pages/About";
@@ -16,7 +16,6 @@ import Home from "./Pages/Home";
 const App = () => {
   const myRoute = createBrowserRouter(
     createRoutesFromElements(
-      // navigation
       <Route element={<RootLayout />}>
         <Route index element={<Home />} />
         {/* <Route path="/about" element={<About />} />
@@ -26,7 +25,12 @@ const App = () => {
       </Route>
     )
   );
-  return <RouterProvider router={myRoute} />;
+
+  return (
+    <ThemeProvider defaultTheme="system" enableSystem>
+      <RouterProvider router={myRoute} />
+    </ThemeProvider>
+  );
 };
 
 export default App;

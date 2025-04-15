@@ -3,13 +3,43 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
+/* @theme {
   --color-text: #ff69b4;
   --color-primary: #e91e63;
   --color-background: #fafafa;
   --color-secondary: #ffc1e3;
   --color-accent: #6d1b7b;
 }
+
+.dark {
+  --dark-background: 222.2 84% 4.9%;
+  --dark-foreground: 210 40% 98%;
+  --dark-primary: 263.4 70% 50.4%;
+  --dark-muted: 217.2 32.6% 17.5%;
+  --dark-muted-foreground: 215 20.2% 65.1%;
+} */
+
+@theme {
+  /* Light Theme (default) */
+  --color-text: #ff69b4;
+  --color-primary: #e91e63;
+  --color-background: #fafafa;
+  --color-secondary: #ffc1e3;
+  --color-accent: #6d1b7b;
+  --color-muted: #eeeeee;
+  --color-muted-foreground: #666666;
+}
+/* Dark Theme Overrides */
+.dark {
+  --color-text: #ffc1e3;
+  --color-primary: #ff69b4;
+  --color-background: #222222;
+  --color-secondary: #6d1b7b;
+  --color-accent: #e91e63;
+  --color-muted: #333333;
+  --color-muted-foreground: #aaaaaa;
+}
+/* rrttttttttttttt */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
