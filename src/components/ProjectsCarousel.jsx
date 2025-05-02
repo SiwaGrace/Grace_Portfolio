@@ -4,20 +4,29 @@ import { useScroll } from "motion/react";
 const ProjectsCarousel = () => {
   const projects = [
     {
-      title: "Emezak Edu",
+      title: "Emezak Educational Consulting",
       description: "An international student consulting platform.",
+      websiteLink: "https://emezakeduconsulting.com/",
     },
     {
       title: "ASAM Foundation",
       description: "Website for a nonprofit health initiative.",
+      websiteLink: "asam-xi.vercel.app",
     },
     {
       title: "Ecoclean",
       description: "Landing page for a professional cleaning service.",
+      websiteLink: "ecoclean-six.vercel.app",
     },
     {
-      title: "Oasis Infobyte",
-      description: "Interactive web apps built during internship.",
+      title: "Ecoclean",
+      description: "Landing page for a professional cleaning service.",
+      websiteLink: "ecoclean-six.vercel.app",
+    },
+    {
+      title: "Ecoclean",
+      description: "Landing page for a professional cleaning service.",
+      websiteLink: "ecoclean-six.vercel.app",
     },
     // ... other projects
   ];
@@ -40,7 +49,7 @@ const ProjectsCarousel = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="min-w-[300px] h-[200px] flex-shrink-0 rounded-xl bg-white  shadow-md  dark:bg-muted-foreground scroll-snap-align-start p-4 transition-transform duration-300"
+            className="min-w-[300px] h-[200px] flex-shrink-0 rounded-xl bg-white  shadow-md  dark:bg-muted-foreground scroll-snap-align-start p-4 transition-transform duration-300 mb-5"
             style={{
               transform: `translateX(${scrollX.get() * 0.2}px)`,
             }}
@@ -49,6 +58,9 @@ const ProjectsCarousel = () => {
               {project.title}
             </h3>
             <p className="text-gray-500 text-sm mt-2">{project.description}</p>
+            <a href={project.websiteLink} target="_blank">
+              view website
+            </a>
           </div>
         ))}
       </div>

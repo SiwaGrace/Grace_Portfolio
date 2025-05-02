@@ -29,7 +29,10 @@ const NavBar = () => {
           <a href="#about" className="hover:text-textColor">
             About
           </a>
-          <DropdownMenu>
+          <a href="#project" className="hover:text-textColor">
+            Projects
+          </a>
+          {/* <DropdownMenu>
             <DropdownMenuTrigger className="hover:text-textColor">
               Projects
             </DropdownMenuTrigger>
@@ -41,7 +44,7 @@ const NavBar = () => {
                 <a href="#project2">Project 2</a>
               </DropdownMenuItem>
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
           <a href="#contact" className="hover:text-textColor">
             Contact
           </a>
