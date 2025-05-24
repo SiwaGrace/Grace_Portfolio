@@ -6,7 +6,7 @@ import Maintenance from "./components/Maintenance";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <App /> */}
-    <Maintenance />
+    <App />
+    {/* <Maintenance /> */}
   </StrictMode>
 );

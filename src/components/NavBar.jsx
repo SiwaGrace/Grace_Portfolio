@@ -52,7 +52,7 @@ const NavBar = () => {
 
         {/* Right - Dark mode toggle & CV button */}
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             <Sun className="w-4 h-4 text-yellow-400" />
             <Switch
               checked={theme === "dark"}
@@ -61,9 +61,9 @@ const NavBar = () => {
               }
             />
             <Moon className="w-4 h-4 text-blue-500" />
-          </div>
+          </div> */}
           <Button className="bg-textColor hover:bg-[#ff85c1] text-white rounded-xl px-4 py-2">
-            <a href="../assets/GraceEsimeDjobokouResume.pdf" download>
+            <a href="/GraceEsimeDjobokouResume.pdf" download>
               Download CV
             </a>
           </Button>

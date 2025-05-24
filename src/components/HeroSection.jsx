@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import hero from "../assets/hero.jpg";
 
 const HeroSection = () => {
   return (
@@ -6,11 +7,11 @@ const HeroSection = () => {
       <section
         className="relative w-full h-screen bg-cover bg-center"
         style={{
-          backgroundImage: "url('src/assets/hero.jpg')",
+          backgroundImage: `url(${hero})`,
         }}
       >
-        {/* Navbar placeholder */}
-        <div className="absolute top-0 left-0 w-full h-full z-10">
+        {/* Navbar placeholder*/}
+        <div className="absolute top-0 left-0 w-full h-full z-10  bg-black opacity-80">
           {/* Place your navbar here */}
         </div>
 
