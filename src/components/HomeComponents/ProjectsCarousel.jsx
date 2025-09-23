@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useScroll } from "motion/react";
-import project from "../assets/hero2.jpg";
+import project from "../../assets/hero2.jpg";
 
 const ProjectsCarousel = () => {
   const projects = [
@@ -43,7 +43,7 @@ const ProjectsCarousel = () => {
   });
 
   return (
-    <section className="py-12 bg-pink-50 dark:bg-mutedColor">
+    <section className="w-[80%] mx-auto py-12">
       <h2 className="text-3xl font-bold text-center mb-6 text-pink-700 ">
         My Projects
       </h2>

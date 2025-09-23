@@ -1,8 +1,8 @@
 import React from "react";
 import { Calendar, Phone, Mail, MapPin } from "lucide-react";
-import myPicture from "../assets/me.jpg";
+import myPicture from "../../assets/me.jpg";
 
-const ProfileCard = () => {
+const About = () => {
   const name = "Grace Djobokou";
   return (
     <section className="py-12 text-center">
@@ -45,4 +45,4 @@ const ProfileCard = () => {
   );
 };
 
-export default ProfileCard;
+export default About;
