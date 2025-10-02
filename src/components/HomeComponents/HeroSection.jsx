@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import hero from "../../assets/heroSection.jpg";
+import { Link } from "react-scroll";
 
 const HeroSection = () => {
   return (
@@ -35,15 +36,22 @@ const HeroSection = () => {
             I’m a passionate software engineer ready to bring ideas to life.
           </motion.p>
 
-          <motion.a
-            href="#projects"
-            className="inline-block bg-pink-600 text-white py-3 px-8 rounded-full text-xl"
+          <motion.p
+            className="inline-block bg-pink-600 text-white py-3 px-8 rounded-full cursor-pointer text-xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.5, delay: 0.5 }}
           >
-            See My Work
-          </motion.a>
+            <Link
+              to="projects" // the id of the section you want to scroll to
+              smooth={true} // enables smooth scrolling
+              duration={800} // scroll duration in ms
+              offset={-50} // adjust if you have a sticky navbar
+              spy={true} // adds "active" class when in view (optional)
+            >
+              See My Work
+            </Link>
+          </motion.p>
         </div>
       </section>
     </>
