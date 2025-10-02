@@ -29,7 +29,7 @@ const About = () => {
     // },
     {
       icon: Phone,
-      href: "tel:+233123456789",
+      href: "tel:+233592899661",
       color: "green-500",
       label: "Telephone",
     },
