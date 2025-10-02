@@ -41,7 +41,7 @@ const About = () => {
     },
     {
       icon: FaLinkedin,
-      href: "https://www.linkedin.com/in/yourprofile",
+      href: "https://www.linkedin.com/in/siwad/",
       color: "blue-700",
       label: "LinkedIn",
     },
