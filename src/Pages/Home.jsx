@@ -7,12 +7,23 @@ import Services from "@/components/HomeComponents/Services";
 import Testimonials from "@/components/HomeComponents/Testimonials";
 import Contact from "@/components/HomeComponents/Contact";
 import BlogCallout from "@/components/HomeComponents/BlogCallout";
+import SEO from "@/components/common/SEO";
 
 const Home = () => {
   return (
     <div className="w-[90vw] mx-auto bg-background text-text">
-      {" "}
-      {/* These are theme-aware classes */}
+      {/* SEO for the Home Page */}
+      <SEO
+        title="Home | Grace's Portfolio"
+        description="Welcome to my portfolio! I build modern, scalable applications with React, Node.js, and more."
+      />
+      {/* add this to every page */}
+      {/* <SEO
+        title="Page Title | Grace's Portfolio"
+        description="Page-specific description here"
+      /> */}
+
+      {/* Sections */}
       <HeroSection />
       <ScrollRevealSection>
         <About />
