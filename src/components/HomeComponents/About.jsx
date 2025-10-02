@@ -17,7 +17,7 @@ import {
   FaGithub,
   FaWhatsapp,
 } from "react-icons/fa";
-import myPicture from "../../assets/me1.png";
+import myPicture from "../../assets/Mypicture.png";
 
 const About = () => {
   const contactLinks = [
@@ -111,8 +111,8 @@ const About = () => {
                 height="200"
                 clipPath="url(#blobClip)"
                 preserveAspectRatio="xMidYMid slice"
-                x="0"
-                y="20"
+                x="-10"
+                y="40"
               />
             </svg>
           </div>
