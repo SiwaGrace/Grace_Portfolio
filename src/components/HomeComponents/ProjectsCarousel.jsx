@@ -35,12 +35,12 @@ const ProjectsCarousel = () => {
       websiteLink: "https://ayo-fitness-gym.vercel.app/",
       image: `${ayofitness}`,
     },
-    {
-      title: "Wanderlust Voyage",
-      description: "homepage for Wanderlust Voyage.",
-      websiteLink: "https://wanderlust-voyage.vercel.app/",
-      image: `${wanderlustvoyage}`,
-    },
+    // {
+    //   title: "Wanderlust Voyage",
+    //   description: "homepage for Wanderlust Voyage.",
+    //   websiteLink: "https://wanderlust-voyage.vercel.app/",
+    //   image: `${wanderlustvoyage}`,
+    // },
     {
       title: "Foresight Consult Ltd",
       description: "accounting and IT solutions business.",
