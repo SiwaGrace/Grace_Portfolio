@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import me from "../../assets/me.jpg";
+// use EmailJS for the contact
 
 const Contact = () => {
   return (
