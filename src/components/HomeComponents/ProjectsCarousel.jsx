@@ -1,6 +1,12 @@
 import { useRef } from "react";
 import { useScroll } from "motion/react";
-import project from "../../assets/hero2.jpg";
+import project from "../../assets/banner.jpg";
+import emezakeduconsulting from "../../assets/Project_Emezak_Educational_Consulting.png";
+import asam from "../../assets/asam.png";
+import Projecteternal from "../../assets/Project_eternal-life.png";
+import ayofitness from "../../assets/ayofitness.png";
+import accountingforesight from "../../assets/accounting-foresight.png";
+import wanderlustvoyage from "../../assets/wanderlust-voyage.png";
 
 const ProjectsCarousel = () => {
   const projects = [
@@ -8,33 +14,39 @@ const ProjectsCarousel = () => {
       title: "Emezak Educational Consulting",
       description: "An international student consulting platform.",
       websiteLink: "https://emezakeduconsulting.com/",
-      image: `${project}`, // Replace with a proper screenshot if available
+      image: `${emezakeduconsulting}`,
     },
     {
       title: "ASAM Foundation",
-      description: "Website for a nonprofit health initiative.",
+      description: "Website for a nonprofit organization that helps the needy.",
       websiteLink: "https://asam-xi.vercel.app/",
-      image: `${project}`,
+      image: `${asam}`,
     },
     {
-      title: "Ecoclean",
-      description: "Landing page for a professional cleaning service.",
-      websiteLink: "https://ecoclean-six.vercel.app/",
-      image: `${project}`,
+      title: "Eternal life",
+      description:
+        "A Ghanain not-for-profit Christian Institute specialized in Leadership Training.",
+      websiteLink: "eternal-life-sigma.vercel.app",
+      image: `${Projecteternal}`,
     },
     {
-      title: "Ecoclean",
-      description: "Landing page for a professional cleaning service.",
-      websiteLink: "https://ecoclean-six.vercel.app/",
-      image: `${project}`,
+      title: "AyoFitness",
+      description: "Affordable gym at home.",
+      websiteLink: "https://ayo-fitness-gym.vercel.app/",
+      image: `${ayofitness}`,
     },
     {
-      title: "Ecoclean",
-      description: "Landing page for a professional cleaning service.",
-      websiteLink: "https://ecoclean-six.vercel.app/",
-      image: `${project}`,
+      title: "Wanderlust Voyage",
+      description: "homepage for Wanderlust Voyage.",
+      websiteLink: "https://wanderlust-voyage.vercel.app/",
+      image: `${wanderlustvoyage}`,
     },
-    // ... other projects
+    {
+      title: "Foresight Consult Ltd",
+      description: "accounting and IT solutions business.",
+      websiteLink: "https://accounting-foresight-tweaked.vercel.app/",
+      image: `${accountingforesight}`,
+    },
   ];
 
   const carouselRef = useRef(null);
@@ -43,25 +55,25 @@ const ProjectsCarousel = () => {
   });
 
   return (
-    <section className="w-[80%] mx-auto py-12">
+    <section id="projects" className="mt-10 py-12  bg-gray-50">
       <h2 className="text-3xl font-bold text-center mb-6 text-pink-700 ">
         My Projects
       </h2>
       <div
         ref={carouselRef}
-        className="flex space-x-6 overflow-x-auto px-4 scrollbar-hide"
+        className="flex space-x-6 overflow-x-auto scrollbar-hide"
         style={{ scrollSnapType: "x mandatory" }}
       >
         {projects.map((project, index) => (
           <div
             key={index}
-            className="min-w-[320px] max-w-[320px] bg-white dark:bg-gray-800 rounded-xl shadow-lg flex flex-col overflow-hidden scroll-snap-align-start transform transition-transform duration-300 hover:scale-105 mb-5"
+            className="min-w-[320px] max-w-[320px] bg-white dark:bg-gray-800 shadow-lg rounded- flex flex-col overflow-hidden scroll-snap-align-start transform transition-transform duration-300 hover:scale-105 mb-5"
             style={{
               transform: `translateX(${scrollX.get() * 0.2}px)`,
             }}
           >
             {/* Image Section */}
-            <div className="h-40 w-full overflow-hidden">
+            <div className="w-full overflow-hidden h-[200px]">
               <img
                 src={project.image}
                 alt={`${project.title} screenshot`}

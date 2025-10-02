@@ -9,13 +9,16 @@ import {
 } from "./ui/dropdown-menu";
 import { Moon, Sun, Menu } from "lucide-react";
 import { useTheme } from "next-themes";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
   const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#project", label: "Projects" },
-    { href: "#contact", label: "Contact" },
+    { href: "home", label: "Home" },
+    { href: "about", label: "About" },
+    { href: "services", label: "Services" },
+    { href: "projects", label: "Projects" },
+    // { href: "blogs", label: "Blogs" },
+    // { href: "contact", label: "Contact" },
   ];
 
   const { setTheme, theme } = useTheme();
@@ -24,26 +27,30 @@ const NavBar = () => {
     <header className="fixed top-0 left-0 w-full bg-[#fef6f9] dark:bg-[#1a1a1a] shadow z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Left - Logo */}
-        <h1 className="text-xl font-bold text-textColor dark:text-textColor">
+        <h1 className="text-xl font-bold text-textColor dark:text-textColor font-mono">
           SiwaGrace
         </h1>
 
         {/* Center - Navigation (hidden on small screens) */}
         <nav className="hidden md:flex items-center gap-6 text-sm text-gray-700 dark:text-gray-200">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
-              className="hover:text-textColor"
+              to={link.href}
+              smooth={true}
+              duration={500}
+              offset={-80} // adjust if you have fixed header height
+              className="hover:text-textColor cursor-pointer"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         {/* Right - Dark mode toggle & CV button */}
-        <div className="flex items-center gap-10">
-          <div className="flex items-center gap-2">
+        <div className="flex items-center gap-6">
+          {/* Dark Mode Toggle */}
+          {/* <div className="flex items-center gap-2">
             <Sun className="w-4 h-4 text-yellow-400" />
             <Switch
               checked={theme === "dark"}
@@ -52,10 +59,10 @@ const NavBar = () => {
               }
             />
             <Moon className="w-4 h-4 text-blue-500" />
-          </div>
+          </div> */}
 
           {/* Desktop CV button */}
-          <Button className="hidden md:inline-flex bg-textColor hover:bg-[#ff85c1] text-white rounded-xl px-4 py-2">
+          <Button className="hidden md:inline-flex bg-textColor hover:bg-accent hover:text-black hover:border hover:border-textColor text-white rounded-xl px-4 py-2">
             <a href="/GraceEsimeDjobokouResume.pdf" download>
               Download CV
             </a>
@@ -72,14 +79,23 @@ const NavBar = () => {
               <DropdownMenuContent className="w-40">
                 {navLinks.map((link) => (
                   <DropdownMenuItem key={link.href}>
-                    <a href={link.href}>{link.label}</a>
+                    <Link
+                      to={link.href}
+                      smooth={true}
+                      duration={500}
+                      offset={-80}
+                      onClick={() => document.activeElement?.blur()} // close dropdown
+                      className="cursor-pointer w-full block"
+                    >
+                      {link.label}
+                    </Link>
                   </DropdownMenuItem>
                 ))}
                 <DropdownMenuItem>
                   <a
                     href="/GraceEsimeDjobokouResume.pdf"
                     download
-                    className="w-full"
+                    className="w-full block"
                   >
                     Download CV
                   </a>

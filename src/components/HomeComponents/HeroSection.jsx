@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
-import hero from "../../assets/hero.jpg";
+import hero from "../../assets/heroSection.jpg";
 
 const HeroSection = () => {
   return (
     <>
       <section
-        className="relative w-full h-screen bg-cover bg-center"
+        className="mt-25 relative w-full h-[80vh] bg-cover bg-center"
         style={{
           backgroundImage: `url(${hero})`,
         }}

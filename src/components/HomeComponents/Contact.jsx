@@ -1,36 +1,62 @@
 import React from "react";
+import { motion } from "framer-motion";
+import me from "../../assets/me.jpg";
 
 const Contact = () => {
   return (
-    <section className="py-16 px-6 bg-gray-50" id="contact">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
-        <p className="text-gray-600 mb-8">
-          Have a project in mind or just want to connect? Send me a message!
-        </p>
-        <form className="grid gap-6 text-left">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+    <section id="contact" className="mt-10 py-16 px-6 ">
+      <div className="max-w-6xl  mx-auto grid md:grid-cols-2 gap-12 items-center md:h-[600px]">
+        {/* Contact Form (left side) */}
+        <motion.div
+          initial={{ x: 300, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="p-8 rounded-2xl shadow-lg bg-gray-900 text-white h-full"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+          <p className="mb-8 text-gray-300">
+            Have a project in mind or just want to connect? Send me a message!
+            I’ll get back to you as soon as possible.
+          </p>
+
+          <form className="grid gap-6 text-left">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="w-full px-5 py-3 border border-gray-700 rounded-xl bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full px-5 py-3 border border-gray-700 rounded-xl bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
+            />
+            <textarea
+              rows="5"
+              placeholder="Your Message"
+              className="w-full px-5 py-3 border border-gray-700 rounded-xl bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-pink-500 transition resize-none"
+            ></textarea>
+            <button
+              type="submit"
+              className="bg-pink-600 text-white py-3 rounded-xl hover:bg-pink-700 transition font-semibold"
+            >
+              Send Message
+            </button>
+          </form>
+        </motion.div>
+
+        {/* Picture (right side) */}
+        <motion.div
+          initial={{ x: -300, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="flex justify-center h-full"
+        >
+          <img
+            src={me}
+            alt="Contact Illustration"
+            className="hidden md:flex w-full rounded-2xl shadow-lg object-cover  md:h-[600px] md:object-cover"
           />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <textarea
-            rows="5"
-            placeholder="Your Message"
-            className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-          ></textarea>
-          <button
-            type="submit"
-            className="bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition"
-          >
-            Send Message
-          </button>
-        </form>
+        </motion.div>
       </div>
     </section>
   );

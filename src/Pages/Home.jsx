@@ -10,20 +10,20 @@ import BlogCallout from "@/components/HomeComponents/BlogCallout";
 
 const Home = () => {
   return (
-    <div className="bg-background text-text">
+    <div className="w-[90vw] mx-auto bg-background text-text">
       {" "}
       {/* These are theme-aware classes */}
       <HeroSection />
       <ScrollRevealSection>
         <About />
       </ScrollRevealSection>
+      <Services />
       <ScrollRevealSection>
         <ProjectsCarousel />
       </ScrollRevealSection>
-      <Services />
-      <BlogCallout />
-      <Testimonials />
-      <Contact />
+      {/* <BlogCallout /> */}
+      {/* <Testimonials /> */}
+      {/* <Contact /> */}
       {/* <h1 className="pt-[100px]">hi</h1> */}
     </div>
   );
