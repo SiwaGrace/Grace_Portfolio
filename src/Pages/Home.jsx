@@ -24,7 +24,6 @@ const Home = () => {
       {/* <BlogCallout /> */}
       {/* <Testimonials /> */}
       {/* <Contact /> */}
-      {/* <h1 className="pt-[100px]">hi</h1> */}
     </div>
   );
 };
