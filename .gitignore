@@ -24,5 +24,4 @@ dist-ssr
 *.sw?
 .qodo
 .env
-/public
-/src/assets/
+/src/assets/worksamples
