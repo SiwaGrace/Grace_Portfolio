@@ -9,15 +9,8 @@ import {
   // instagram,
   // whatsapp,
 } from "lucide-react";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedin,
-  FaGithub,
-  FaWhatsapp,
-} from "react-icons/fa";
-import myPicture from "../../assets/Mypicture.png";
+import { FaLinkedin } from "react-icons/fa";
+import myPicture from "../../assets/Mypicture1.png";
 
 const About = () => {
   const contactLinks = [
@@ -100,8 +93,8 @@ const About = () => {
               <path
                 d="M66.3,-17.1C74.6,4,62.2,36.3,38.3,54C14.4,71.6,-21,74.6,-39.8,59.8C-58.6,45,-60.8,12.3,-51.4,-10.4C-42,-33,-21,-45.6,4,-46.9C29,-48.2,58,-38.3,66.3,-17.1Z"
                 transform="translate(100 100) scale(1.4)"
-                fill="#f9a8d4"
-                stroke="#ec4899"
+                fill="#fabbdd"
+                stroke="#f7b0d7"
                 strokeWidth="4"
               />
 
@@ -111,8 +104,8 @@ const About = () => {
                 height="200"
                 clipPath="url(#blobClip)"
                 preserveAspectRatio="xMidYMid slice"
-                x="-10"
-                y="40"
+                x="-2"
+                y="10"
               />
             </svg>
           </div>
