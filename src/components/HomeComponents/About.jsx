@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { FaLinkedin } from "react-icons/fa";
 // import myPicture from "../../assets/Mypicture2.png";
-import myPicture from "../../assets/Mypicturewhitebg.png";
+import myPicture from "../../assets/whitebg.png";
 
 const About = () => {
   const contactLinks = [
