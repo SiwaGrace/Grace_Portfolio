@@ -34,7 +34,7 @@ const Home = () => {
       </ScrollRevealSection>
       {/* <BlogCallout /> */}
       {/* <Testimonials /> */}
-      {/* <Contact /> */}
+      <Contact />
     </div>
   );
 };

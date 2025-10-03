@@ -9,6 +9,7 @@ import { ThemeProvider } from "./components/theme/theme-provider"; // You'll nee
 import { HelmetProvider } from "react-helmet-async";
 import RootLayout from "./layout/RootLayout";
 import Home from "./Pages/Home";
+import ErrorModal from "./components/HomeComponents/ErrorModal";
 // import Blog from "./Pages/Blog";
 // import Contact from "./Pages/Contact";
 // import Projects from "./Pages/Projects";
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} /> */}
+        <Route path="/er" element={<ErrorModal />} />
       </Route>
     )
   );
