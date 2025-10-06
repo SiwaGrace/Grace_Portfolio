@@ -25,3 +25,4 @@ dist-ssr
 .qodo
 .env
 /src/assets/worksamples
+/src/assets/projects.txt
