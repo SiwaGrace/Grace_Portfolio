@@ -29,12 +29,12 @@ const ProjectsCarousel = () => {
       websiteLink: "eternal-life-sigma.vercel.app",
       image: `${Projecteternal}`,
     },
-    {
-      title: "AyoFitness",
-      description: "Affordable gym at home.",
-      websiteLink: "https://ayo-fitness-gym.vercel.app/",
-      image: `${ayofitness}`,
-    },
+    // {
+    //   title: "AyoFitness",
+    //   description: "Affordable gym at home.",
+    //   websiteLink: "https://ayo-fitness-gym.vercel.app/",
+    //   image: `${ayofitness}`,
+    // },
     // {
     //   title: "Wanderlust Voyage",
     //   description: "homepage for Wanderlust Voyage.",
