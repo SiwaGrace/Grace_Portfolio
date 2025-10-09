@@ -59,5 +59,9 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("✅ Portfolio backend is running smoothly!");
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
