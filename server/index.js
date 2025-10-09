@@ -7,23 +7,28 @@ dotenv.config();
 
 const app = express();
 
-// CORS setup
+// ✅ CORS setup
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://grace-portfolio.vercel.app"],
+    origin: [
+      "http://localhost:5173", // local dev
+      // "https://grace-portfolio.vercel.app", // old domain
+      "https://grace-portfolio-pink.vercel.app", // new Vercel deployment
+    ],
     methods: ["GET", "POST"],
+    credentials: true, // optional if you need cookies
   })
 );
+
 app.use(express.json());
 
-// 🩵 Confirm backend running
+// Confirm backend running
 app.get("/", (req, res) => {
   res.send("✅ Portfolio backend (Resend version) is running smoothly!");
 });
 
-// ✉️ Email route
+// Email route
 app.post("/send-email", sendEmail);
 
-// Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
