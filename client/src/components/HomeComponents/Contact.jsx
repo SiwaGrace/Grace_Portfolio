@@ -26,7 +26,12 @@ const Contact = () => {
       email: form.current.user_email.value,
       message: form.current.message.value,
     };
-    const API_URL = import.meta.env.VITE_BACKEND_URL;
+
+    // ✅ Set your deployed backend URL here
+    const API_URL =
+      import.meta.env.VITE_BACKEND_URL ||
+      "https://grace-portfolio.onrender.com"; // fallback just in case
+
     try {
       const response = await fetch(`${API_URL}/send-email`, {
         method: "POST",
