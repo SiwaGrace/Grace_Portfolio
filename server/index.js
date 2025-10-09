@@ -11,15 +11,17 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "http://localhost:5173", // local dev
-      // "https://grace-portfolio.vercel.app", // old domain
-      "https://grace-portfolio-pink.vercel.app", // new Vercel deployment
+      "http://localhost:5173",
+      "https://grace-portfolio-pink.vercel.app",
     ],
     methods: ["GET", "POST"],
-    credentials: true, // optional if you need cookies
+    allowedHeaders: ["Content-Type"],
+    credentials: true,
   })
 );
 
+// This ensures preflight requests are handled
+app.options("*", cors());
 app.use(express.json());
 
 // Confirm backend running
