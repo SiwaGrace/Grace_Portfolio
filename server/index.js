@@ -10,6 +10,10 @@ app.use(cors());
 // ({ origin: ["http://localhost:5173", "https://yourdomain.com"] });
 app.use(express.json());
 
+// ====== confirm backend is working ======
+app.get("/", (req, res) => {
+  res.send("✅ Portfolio backend is running smoothly!");
+});
 // ====== ROUTE TO SEND EMAIL ======
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
@@ -57,10 +61,6 @@ app.post("/send-email", async (req, res) => {
       message: "Failed to send email or auto-reply.",
     });
   }
-});
-
-app.get("/", (req, res) => {
-  res.send("✅ Portfolio backend is running smoothly!");
 });
 
 const PORT = process.env.PORT || 5000;
