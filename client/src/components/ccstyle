@@ -1,23 +1,23 @@
 /* Light Theme */
 :root {
-  --color-textColor: #E91E63;        /* Main pink for text */
-  --color-primaryColor: #E91E63;     /* Buttons, links, main accents */
-  --color-backgroundColor: #FAFAFA;  /* Page background */
-  --color-secondaryColor: #F8BBD0;   /* Subtle highlights, cards */
-  --color-accentColor: #C2185B;      /* Hover, secondary accents */
-  --color-mutedColor: #EEEEEE;       /* Muted background or borders */
-  --color-foregroundColor: #666666;  /* Body text or secondary text */
+  --color-textColor: #e91e63; /* Main pink for text */
+  --color-primaryColor: #e91e63; /* Buttons, links, main accents */
+  --color-backgroundColor: #fafafa; /* Page background */
+  --color-secondaryColor: #f8bbd0; /* Subtle highlights, cards */
+  --color-accentColor: #c2185b; /* Hover, secondary accents */
+  --color-mutedColor: #eeeeee; /* Muted background or borders */
+  --color-foregroundColor: #666666; /* Body text or secondary text */
 }
 
 /* Dark Theme */
 .dark {
-  --color-textColor: #FFC1E3;        /* Softer pink for readability on dark */
-  --color-primaryColor: #FF69B4;     /* Buttons, links */
-  --color-backgroundColor: #222222;  /* Page background */
-  --color-secondaryColor: #6D1B7B;   /* Cards or highlights */
-  --color-accentColor: #E91E63;      /* Hover, secondary accents */
-  --color-mutedColor: #333333;       /* Dark card backgrounds, muted elements */
-  --color-foregroundColor: #AAAAAA;  /* Secondary text on dark bg */
+  --color-textColor: #ffc1e3; /* Softer pink for readability on dark */
+  --color-primaryColor: #ff69b4; /* Buttons, links */
+  --color-backgroundColor: #222222; /* Page background */
+  --color-secondaryColor: #6d1b7b; /* Cards or highlights */
+  --color-accentColor: #e91e63; /* Hover, secondary accents */
+  --color-mutedColor: #333333; /* Dark card backgrounds, muted elements */
+  --color-foregroundColor: #aaaaaa; /* Secondary text on dark bg */
 }
 
 /* Utility Classes for Tailwind integration */

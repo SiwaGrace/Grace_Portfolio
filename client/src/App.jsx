@@ -5,7 +5,6 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import { ThemeProvider } from "./components/theme/theme-provider"; // You'll need to create this
 import { HelmetProvider } from "react-helmet-async";
 import RootLayout from "./layout/RootLayout";
 import Home from "./Pages/Home";
@@ -24,15 +23,13 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} /> */}
         <Route path="/er" element={<ErrorModal />} />
-      </Route>
-    )
+      </Route>,
+    ),
   );
 
   return (
     <HelmetProvider>
-      <ThemeProvider defaultTheme="system" enableSystem>
-        <RouterProvider router={myRoute} />
-      </ThemeProvider>
+      <RouterProvider router={myRoute} />
     </HelmetProvider>
   );
 };

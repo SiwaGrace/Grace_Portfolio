@@ -11,7 +11,7 @@ import SEO from "@/components/common/SEO";
 
 const Home = () => {
   return (
-    <div className="w-[90vw] mx-auto bg-background text-text">
+    <div className="w-[90vw] mx-auto  text-text">
       {/* SEO for the Home Page */}
       <SEO
         title="Home | Grace's Portfolio"
@@ -28,12 +28,14 @@ const Home = () => {
       <ScrollRevealSection>
         <About />
       </ScrollRevealSection>
-      <Services />
+      <ScrollRevealSection>
+        <Services />
+      </ScrollRevealSection>
       <ScrollRevealSection>
         <ProjectsCarousel />
       </ScrollRevealSection>
-      {/* <BlogCallout /> */}
-      {/* <Testimonials /> */}
+      <BlogCallout />
+      <Testimonials />
       <Contact />
     </div>
   );

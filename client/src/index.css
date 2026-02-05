@@ -41,28 +41,43 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+
+  box-sizing: border-box;
+  margin: 0;
+
+  --primaryColor: #0024ee;
+  --secondaryColor: #ffc1e3;
+  --accentColor: #6d1b7b;
+  --primaryText: #ff69b4;
+  --secondaryText: #cc086a;
+  --divider: #eeeeee;
 }
 
-/* Light Theme (default) */
+/* Light Theme (default) is this even neccessary? color in root and dark seem enough */
 @theme {
-  /* --color-background: oklch(1 0 0); */
-  --color-textColor: #ff69b4;
-  --color-primaryColor: #e91e63;
-  --color-backgroundColor: #fafafa;
-  --color-secondaryColor: #ffc1e3;
-  --color-accentColor: #6d1b7b;
-  --color-mutedColor: #eeeeee;
-  --color-foregroundColor: #666666;
+  --color-primaryColor: var(--primaryColor); /* background */
+  --color-secondaryColor: var(--secondaryColor); /* surfaces */
+  --color-accentColor: var(--accentColor); /* brand */
+  --color-primaryText: var(--primaryText); /* headings */
+  --color-secondaryText: var(--secondaryText); /*descriptions*/
+  ---color-divider: var(--divider);
 }
 /* Dark Theme */
 .dark {
-  --color-textColor: #ffc1e3;
-  --color-primaryColor: #ff69b4;
-  --color-backgroundColor: #222222;
-  --color-secondaryColor: #6d1b7b;
-  --color-accentColor: #e91e63;
-  --color-mutedColor: #333333;
-  --color-foregroundColor: #aaaaaa;
+  --primaryColor: #ff69b4;
+  --secondaryColor: #6d1b7b;
+  --accentColor: #e91e63;
+  --primaryText: #ffc1e3;
+  --secondaryText: #222222;
+  --divider: #333333;
+}
+
+body {
+  background-color: var(--primaryColor);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  /* color: var(--primaryText); */
 }
 
 /* 

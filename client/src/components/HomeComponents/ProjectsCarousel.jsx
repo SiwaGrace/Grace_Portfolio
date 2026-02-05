@@ -57,7 +57,7 @@ const ProjectsCarousel = () => {
   });
 
   return (
-    <section id="projects" className="mt-10 py-12  bg-gray-50">
+    <section id="projects" className="mt-10 py-12">
       <h2 className="text-3xl font-bold text-center mb-6 text-pink-700 ">
         My Projects
       </h2>
@@ -69,7 +69,7 @@ const ProjectsCarousel = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="min-w-[320px] max-w-[320px] bg-white dark:bg-gray-800 shadow-lg rounded- flex flex-col overflow-hidden scroll-snap-align-start transform transition-transform duration-300 hover:scale-105 mb-5"
+            className="min-w-[320px] max-w-[320px] bg-white  shadow-lg rounded- flex flex-col overflow-hidden scroll-snap-align-start transform transition-transform duration-300 hover:scale-105 mb-5"
             style={{
               transform: `translateX(${scrollX.get() * 0.2}px)`,
             }}
@@ -89,7 +89,7 @@ const ProjectsCarousel = () => {
               <h3 className="text-lg font-semibold text-pink-600">
                 {project.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mt-2 flex-grow">
+              <p className="text-gray-600 text-sm mt-2 flex-grow">
                 {project.description}
               </p>
               <a

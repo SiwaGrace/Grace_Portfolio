@@ -17,11 +17,10 @@ app.use(
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
     credentials: true,
-  })
+  }),
 );
 
 // This ensures preflight requests are handled
-app.options("*", cors());
 app.use(express.json());
 
 // Confirm backend running

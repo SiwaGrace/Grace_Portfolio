@@ -74,7 +74,7 @@ const About = () => {
 
   const name = "Grace Djobokou";
   return (
-    <section id="about" className="mt-10 py-16 bg-gray-50 dark:bg-gray-900">
+    <section id="about" className="mt-10 py-16">
       <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-10">
         {/* Image */}
         <div className="w-full md:w-1/2 flex justify-center ">
@@ -115,16 +115,14 @@ const About = () => {
 
         {/* Text */}
         <div className="w-full md:w-1/2 flex flex-col justify-center text-center md:text-left space-y-4">
-          <p className="text-sm uppercase tracking-widest text-gray-400 dark:text-gray-500">
+          <p className="text-sm uppercase tracking-widest text-gray-400">
             Hello, I am
           </p>
-          <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white">
-            {name}
-          </h1>
-          <h2 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+          <h1 className="text-4xl font-extrabold text-gray-900 ">{name}</h1>
+          <h2 className="text-xl font-semibold text-gray-700">
             Full Stack Developer
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-2">
+          <p className="text-gray-600 leading-relaxed mt-2">
             I am a software engineer based in Ghana, specializing in frontend
             development. My skills include HTML, CSS, JavaScript, Tailwind CSS,
             Bootstrap, and React. I enjoy solving problems, learning new
@@ -134,7 +132,7 @@ const About = () => {
           </p>
 
           {/* Contact Icons */}
-          <div className="flex justify-center md:justify-start gap-6 mt-4 text-gray-600 dark:text-gray-300">
+          <div className="flex justify-center md:justify-start gap-6 mt-4 text-gray-600">
             {contactLinks.map(({ icon: Icon, href, color, label }) => (
               <a
                 key={href}

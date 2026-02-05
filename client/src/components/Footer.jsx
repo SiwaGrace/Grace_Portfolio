@@ -3,13 +3,13 @@ import { Linkedin, Github, Twitter, Instagram, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="mt-[100px] w-full py-4 px-6 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500 dark:text-gray-400">
+    <footer className="mt-[100px] w-full py-4 px-6 border-t border-gray-200  ">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500 ">
         <div className="text-left w-full sm:w-auto">
           &copy; {new Date().getFullYear()} SiwaGrace. All rights reserved.
         </div>
 
-        <div className="text-center w-full sm:w-auto font-semibold text-gray-700 dark:text-gray-100">
+        <div className="text-center w-full sm:w-auto font-semibold text-gray-700 ">
           SiwaGrace
         </div>
 

@@ -8,10 +8,9 @@ import {
   DropdownMenuItem,
 } from "./ui/dropdown-menu";
 import { Moon, Sun, Menu } from "lucide-react";
-import { useTheme } from "next-themes";
 import { Link } from "react-scroll";
 
-const NavBar = () => {
+const NavBar = ({ isDarkMode, toggleTheme }) => {
   const navLinks = [
     { href: "home", label: "Home" },
     { href: "about", label: "About" },
@@ -21,18 +20,16 @@ const NavBar = () => {
     // { href: "contact", label: "Contact" },
   ];
 
-  const { setTheme, theme } = useTheme();
-
   return (
-    <header className="fixed top-0 left-0 w-full bg-[#fef6f9] dark:bg-[#1a1a1a] shadow z-50">
+    <header className="fixed top-0 left-0 w-full shadow z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Left - Logo */}
-        <h1 className="text-xl font-bold text-textColor dark:text-textColor font-mono">
+        <h1 className="text-xl font-bold text-textColor font-mono">
           SiwaGrace
         </h1>
 
         {/* Center - Navigation (hidden on small screens) */}
-        <nav className="hidden md:flex items-center gap-6 text-sm text-gray-700 dark:text-gray-200">
+        <nav className="hidden md:flex items-center gap-6 text-sm text-gray-700 ">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -48,19 +45,13 @@ const NavBar = () => {
         </nav>
 
         {/* Right - Dark mode toggle & CV button */}
+        <button
+          onClick={toggleTheme}
+          className="p-2 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-800 dark:text-yellow-400 transition-all hover:scale-110"
+        >
+          {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
         <div className="flex items-center gap-6">
-          {/* Dark Mode Toggle */}
-          {/* <div className="flex items-center gap-2">
-            <Sun className="w-4 h-4 text-yellow-400" />
-            <Switch
-              checked={theme === "dark"}
-              onCheckedChange={(checked) =>
-                setTheme(checked ? "dark" : "light")
-              }
-            />
-            <Moon className="w-4 h-4 text-blue-500" />
-          </div> */}
-
           {/* Desktop CV button */}
           <Button className="hidden md:inline-flex bg-textColor hover:bg-accent hover:text-black hover:border hover:border-textColor text-white rounded-xl px-4 py-2">
             <a href="/GraceEsimeDjobokouResume.pdf" download>
@@ -73,10 +64,10 @@ const NavBar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="icon">
-                  <Menu className="h-5 dark:text-textColor w-5" />
+                  <Menu className="h-5  w-5" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-40">
+              <DropdownMenuContent className="w-40 mr-4">
                 {navLinks.map((link) => (
                   <DropdownMenuItem key={link.href}>
                     <Link
