@@ -22,10 +22,12 @@ const BlogCallout = () => {
   ];
 
   return (
-    <section className="mt-10 py-16 px-6  " id="blogs">
+    <section className="py-16 px-6" id="blogs">
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-4 ">Explore My Blog</h2>
-        <p className=" mb-12">
+        <h2 className="text-3xl font-bold mb-4 text-primaryText ">
+          Explore My Blog
+        </h2>
+        <p className="text-secondaryText mb-12">
           I share insights, tutorials, and stories from my journey as a
           fullstack developer. Whether you’re just starting out or leveling up,
           you’ll find something valuable. 🚀
@@ -60,7 +62,7 @@ const BlogCallout = () => {
         {/* Call to Action Button */}
         <a
           href="/blog" // replace with main blog link
-          className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition"
+          className="inline-flex items-center gap-2 text-accentColor underline px-6 py-3 rounded-xl hover:text-white hover:bg-secondaryColor  transition"
         >
           Visit My Blog <ArrowRight className="w-5 h-5" />
         </a>

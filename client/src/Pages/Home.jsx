@@ -8,6 +8,7 @@ import Testimonials from "@/components/HomeComponents/Testimonials";
 import Contact from "@/components/HomeComponents/Contact";
 import BlogCallout from "@/components/HomeComponents/BlogCallout";
 import SEO from "@/components/common/SEO";
+import TechStack from "@/components/HomeComponents/TechStack";
 
 const Home = () => {
   return (
@@ -23,19 +24,34 @@ const Home = () => {
         description="Page-specific description here"
       /> */}
 
-      {/* Sections */}
-      <HeroSection />
+      {/* hero section */}
+      {/* <HeroSection /> */}
+
+      {/* about section */}
       <ScrollRevealSection>
         <About />
       </ScrollRevealSection>
+
+      {/* services section */}
       <ScrollRevealSection>
         <Services />
       </ScrollRevealSection>
+
+      {/* tech stack section */}
+      <TechStack />
+
+      {/* project section */}
       <ScrollRevealSection>
         <ProjectsCarousel />
       </ScrollRevealSection>
-      <BlogCallout />
-      <Testimonials />
+
+      {/* blog section */}
+      {/* <BlogCallout /> */}
+
+      {/* testimonaial section */}
+      {/* <Testimonials /> */}
+
+      {/* contact section */}
       <Contact />
     </div>
   );

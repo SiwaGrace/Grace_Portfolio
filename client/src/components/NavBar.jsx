@@ -21,15 +21,20 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full shadow z-50">
+    <header className="fixed bg-primaryColor top-0 left-0 w-full shadow z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Left - Logo */}
-        <h1 className="text-xl font-bold text-textColor font-mono">
-          SiwaGrace
-        </h1>
+        {/* Brand Group */}
+        <div className="flex items-center gap-3 group">
+          <div className="size-8 bg-accentColor rounded-lg flex items-center justify-center text-white shadow-[0_0_15px_rgba(238,43,140,0.4)]">
+            <span className="material-symbols-outlined">code</span>
+          </div>
+          <span className="text-xl font-bold text-primaryText tracking-tight font-mono">
+            Siwa<span className="text-accentColor">Grace</span>
+          </span>
+        </div>
 
         {/* Center - Navigation (hidden on small screens) */}
-        <nav className="hidden md:flex items-center gap-6 text-sm text-gray-700 ">
+        <nav className="hidden md:flex items-center gap-6 text-sm text-secondaryText ">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -44,16 +49,17 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
           ))}
         </nav>
 
-        {/* Right - Dark mode toggle & CV button */}
-        <button
-          onClick={toggleTheme}
-          className="p-2 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-800 dark:text-yellow-400 transition-all hover:scale-110"
-        >
-          {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-        </button>
         <div className="flex items-center gap-6">
+          {/* Right - Dark mode toggle & CV button */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-full bg-gray-100 dark:bg-slate-800 text-gray-800 dark:text-yellow-400 transition-all hover:scale-110"
+          >
+            {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+
           {/* Desktop CV button */}
-          <Button className="hidden md:inline-flex bg-textColor hover:bg-accent hover:text-black hover:border hover:border-textColor text-white rounded-xl px-4 py-2">
+          <Button className="hidden md:inline-flex bg-secondaryColor hover:bg-accent hover:text-black hover:border hover:border-textColor text-white rounded-xl px-4 py-2">
             <a href="/GraceEsimeDjobokouResume.pdf" download>
               Download CV
             </a>

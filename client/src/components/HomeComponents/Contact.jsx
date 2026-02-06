@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import SuccessModal from "./SuccessModal";
 import ErrorModal from "./ErrorModal";
+import { Mail, MapPin, CheckCircle2, AlertCircle, X } from "lucide-react";
+import FormField from "./FormField";
 
 const Input = ({ as = "input", className = "", ...props }) => {
   const baseStyles =
@@ -26,10 +28,8 @@ const Contact = () => {
       message: form.current.message.value,
     };
 
-    // ✅ Set your deployed backend URL here
-    const API_URL =
-      import.meta.env.VITE_BACKEND_URL ||
-      "https://grace-portfolio.onrender.com"; // fallback just in case
+    // deployed backend URL
+    const API_URL = import.meta.env.VITE_BACKEND_URL;
 
     try {
       const response = await fetch(`${API_URL}/send-email`, {
@@ -55,51 +55,96 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="mt-10 py-16 px-6">
-      <div className="max-w-3xl mx-auto items-center md:h-[600px]">
-        <div className="p-8 shadow-lg bg-gray-900 text-white h-full">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-          <p className="mb-8 text-gray-300">
-            Have a project in mind or just want to connect? Send me a message!
-          </p>
+    <section className="px-4 md:px-10 lg:px-10 py-24 " id="contact">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+          {/* Left Side: Content */}
+          <div className="flex flex-col justify-center">
+            <h2 className="text-5xl font-bold mb-8 leading-[1.1] text-primaryText">
+              Let's build something{" "}
+              <span className="text-accentColor italic">extraordinary</span>{" "}
+              together.
+            </h2>
+            <p className="text-secondaryText mb-12 text-lg font-light leading-relaxed">
+              I am currently available for new opportunities, strategic
+              collaborations, and specialized freelance projects. Let's discuss
+              your vision.
+            </p>
 
-          <form
-            ref={form}
-            onSubmit={sendEmail}
-            className="grid gap-6 text-left"
-          >
-            <Input
-              type="text"
-              name="user_name"
-              placeholder="Your Name"
-              required
-            />
-            <Input
-              type="email"
-              name="user_email"
-              placeholder="Your Email"
-              required
-            />
-            <Input
-              as="textarea"
-              name="message"
-              rows="5"
-              placeholder="Your Message"
-              required
-              className="resize-none"
-            />
+            <div className="flex flex-col gap-8">
+              <div className="flex items-center gap-5 group">
+                <div className="size-14 rounded-2xl bg-accentColor text-white flex items-center justify-center transition-transform group-hover:rotate-12 shadow-lg shadow-pink-200">
+                  <Mail size={24} />
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase text-primaryText font-black tracking-widest">
+                    Email Me
+                  </p>
+                  <p className="font-bold text-xl text-secondaryText">
+                    hello@siwagrace.com
+                  </p>
+                </div>
+              </div>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="bg-pink-600 text-white py-3 rounded-sm hover:bg-pink-700 transition font-semibold cursor-pointer"
+              <div className="flex items-center gap-5 group">
+                <div className="size-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center transition-transform group-hover:rotate-12">
+                  <MapPin size={24} />
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase text-primaryText font-black tracking-widest">
+                    Location
+                  </p>
+                  <p className="font-bold text-xl text-secondaryText">
+                    San Francisco, CA
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side: Form */}
+          <div className="bg-primaryColor p-10 rounded-[2rem] border-2 border-slate-100 dark:border-gray-700 shadow-2xl shadow-slate-200/50 dark:shadow-gray-500/50">
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="flex flex-col gap-6"
             >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
-          </form>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <FormField
+                  label="Full Name"
+                  name="user_name"
+                  placeholder="John Doe"
+                />
+
+                <FormField
+                  label="Email Address"
+                  name="user_email"
+                  type="email"
+                  placeholder="john@example.com"
+                />
+              </div>
+
+              <FormField
+                label="Project Message"
+                name="message"
+                as="textarea"
+                rows={5}
+                placeholder="Describe your vision..."
+              />
+
+              <button
+                disabled={loading}
+                className={`w-full bg-accentColor text-white font-black uppercase tracking-widest py-5 rounded-xl mt-2 transition-all shadow-xl shadow-pink-300 dark:shadow-accentColor/30 hover:bg-[linear-gradient(135deg,#FF2D55_0%,#000000_100%)] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed`}
+                type="submit"
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
 
+      {/* Modals */}
       {showSuccess && <SuccessModal onClose={() => setShowSuccess(false)} />}
       {showError && <ErrorModal onClose={() => setShowError(false)} />}
     </section>
