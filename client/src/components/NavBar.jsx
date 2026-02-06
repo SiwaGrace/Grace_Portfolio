@@ -8,11 +8,12 @@ import {
   DropdownMenuItem,
 } from "./ui/dropdown-menu";
 import { Moon, Sun, Menu } from "lucide-react";
+// using react scroll here, when i have pages would turn it into react router dom
 import { Link } from "react-scroll";
 
 const NavBar = ({ isDarkMode, toggleTheme }) => {
   const navLinks = [
-    { href: "home", label: "Home" },
+    // { href: "home", label: "Home" },
     { href: "about", label: "About" },
     { href: "services", label: "Services" },
     { href: "projects", label: "Projects" },
@@ -42,6 +43,8 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
               smooth={true}
               duration={500}
               offset={-80} // adjust if you have fixed header height
+              spy={true}
+              activeClass="text-accentColor font-bold"
               className="hover:text-textColor cursor-pointer"
             >
               {link.label}
@@ -49,6 +52,7 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
           ))}
         </nav>
 
+        {/* right:theme & small screen navigation */}
         <div className="flex items-center gap-6">
           {/* Right - Dark mode toggle & CV button */}
           <button
@@ -68,12 +72,16 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
           {/* Mobile Menu */}
           <div className="md:hidden">
             <DropdownMenu>
-              <DropdownMenuTrigger asChild>
+              <DropdownMenuTrigger
+                asChild
+                className="bg-primaryColor dark:bg-black"
+              >
                 <Button variant="outline" size="icon">
-                  <Menu className="h-5  w-5" />
+                  <Menu className="h-5  w-5 text-primaryText " />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-40 mr-4">
+              {/* h-[50vh] */}
+              <DropdownMenuContent className="w-40 mr-4 bg-primaryColor text-primaryText border border-gray-100 dark:border-gray-800  ">
                 {navLinks.map((link) => (
                   <DropdownMenuItem key={link.href}>
                     <Link
@@ -82,6 +90,8 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
                       duration={500}
                       offset={-80}
                       onClick={() => document.activeElement?.blur()} // close dropdown
+                      spy={true}
+                      activeClass="text-accentColor font-bold"
                       className="cursor-pointer w-full block"
                     >
                       {link.label}

@@ -86,7 +86,7 @@ const ProjectsCarousel = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group relative overflow-hidden rounded-2xl bg-gray-900 aspect-[4/5] min-w-[320px] lg:min-w-[370px] max-w-[420px] flex-shrink-0 scroll-snap-align-start"
+            className="group relative overflow-hidden rounded-2xl bg-gray-900 aspect-[4/6] lg:aspect-[4/5] min-w-[320px] lg:min-w-[370px] max-w-[420px] flex-shrink-0 scroll-snap-align-start"
             style={{
               transform: `translateX(${scrollX.get() * 0.1}px)`,
             }}
@@ -98,8 +98,8 @@ const ProjectsCarousel = () => {
             />
 
             {/* Overlay Content */}
-            <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-white/40 to-transparent   dark:from-black dark:via-black/40 dark:to-transparent  p-6 flex flex-col justify-end translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
-              <div className="space-y-4">
+            <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-white/40 to-transparent   dark:from-black dark:via-black/40 dark:to-transparent  p-6 flex flex-col justify-end translate-y-8 sm:group-hover:translate-y-0 transition-transform duration-300 mb-4 sm:mb-0">
+              <div className="space-y-4 ">
                 {/* Tech Tags */}
                 <div className="flex gap-2 flex-wrap">
                   {project.tech?.map((tech, i) => (
@@ -128,12 +128,12 @@ const ProjectsCarousel = () => {
                 </h3>
 
                 {/* Description - appears on hover */}
-                <p className="text-white dark:text-secondaryText text-sm max-w-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                <p className="text-white dark:text-secondaryText text-sm max-w-sm md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 delay-100">
                   {project.description}
                 </p>
 
                 {/* Action Buttons - appear on hover */}
-                <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                <div className="flex gap-4 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
                   <a
                     href={
                       project.websiteLink.startsWith("http")

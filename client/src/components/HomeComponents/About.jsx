@@ -136,7 +136,7 @@ const About = () => {
                     dy="0"
                     stdDeviation="10"
                     floodColor="#ee2b8c"
-                    floodOpacity="0.20"
+                    floodOpacity="0.15"
                   />
                 </filter>
               </defs>
