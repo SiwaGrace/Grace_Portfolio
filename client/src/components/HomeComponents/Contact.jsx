@@ -81,7 +81,7 @@ const Contact = () => {
                     Email Me
                   </p>
                   <p className="font-bold text-xl text-secondaryText">
-                    hello@siwagrace.com
+                    esidjograce@gmail.com
                   </p>
                 </div>
               </div>
@@ -95,7 +95,7 @@ const Contact = () => {
                     Location
                   </p>
                   <p className="font-bold text-xl text-secondaryText">
-                    San Francisco, CA
+                    Accra, GHANA
                   </p>
                 </div>
               </div>

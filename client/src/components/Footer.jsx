@@ -14,27 +14,27 @@ const Footer = () => {
       icon: Github,
     },
     {
-      label: "Twitter",
-      href: "https://twitter.com/your-handle",
-      icon: Twitter,
-    },
-    {
-      label: "Instagram",
-      href: "https://instagram.com/your-handle",
-      icon: Instagram,
-    },
-    {
       label: "Email",
-      href: "mailto:your-email@example.com",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=esidjograce@gmail.com",
       icon: Mail,
       isExternal: false,
     },
+    // {
+    //   label: "Twitter",
+    //   href: "https://x.com/Hanna16469920",
+    //   icon: Twitter,
+    // },
+    // {
+    //   label: "Instagram",
+    //   href: "https://www.instagram.com/tini_gracey",
+    //   icon: Instagram,
+    // },
   ];
 
   return (
     <footer className="mt-[100px] w-full py-4 px-6 border-t border-gray-200 dark:border-gray-500 ">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-secondaryText">
-        <div className="text-left w-full sm:w-auto">
+        <div className="text-center w-full sm:w-auto">
           &copy; {new Date().getFullYear()} SiwaGrace. All rights reserved.
         </div>
 

@@ -38,7 +38,9 @@ const Home = () => {
       </ScrollRevealSection>
 
       {/* tech stack section */}
-      <TechStack />
+      <ScrollRevealSection>
+        <TechStack />
+      </ScrollRevealSection>
 
       {/* project section */}
       <ScrollRevealSection>
@@ -46,13 +48,19 @@ const Home = () => {
       </ScrollRevealSection>
 
       {/* blog section */}
-      {/* <BlogCallout /> */}
+      {/* <ScrollRevealSection>
+      <BlogCallout />
+      </ScrollRevealSection> */}
 
       {/* testimonaial section */}
-      {/* <Testimonials /> */}
+      {/* <ScrollRevealSection>
+        <Testimonials />
+        </ScrollRevealSection> */}
 
       {/* contact section */}
-      <Contact />
+      <ScrollRevealSection>
+        <Contact />
+      </ScrollRevealSection>
     </div>
   );
 };

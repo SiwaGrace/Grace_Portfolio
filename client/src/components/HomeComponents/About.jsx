@@ -2,15 +2,14 @@ import React from "react";
 import {
   Phone,
   Mail,
-  // gitMerge,
+  Github,
   // MapPin,
   // linkedin,
-  // lithub,
-  // twitter,
-  // instagram,
+  Twitter,
+  Instagram,
   // whatsapp,
 } from "lucide-react";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaTiktok } from "react-icons/fa";
 import myPicture from "../../assets/myPicture.png";
 // import myPicture from "../../assets/mine.jpg";
 // import myPicture from "../../assets/whitebg.png";
@@ -41,29 +40,29 @@ const About = () => {
       color: "blue-700",
       label: "LinkedIn",
     },
+    {
+      icon: Github,
+      href: "https://github.com/SiwaGrace",
+      color: "gray-800",
+      label: "GitHub",
+    },
     // {
-    //   icon: gitMerge,
-    //   href: "https://github.com/SiwaGrace",
-    //   color: "gray-800",
-    //   label: "GitHub",
-    // },
-    // {
-    //   icon: twitter,
-    //   href: "https://twitter.com/yourusername",
+    //   icon: Twitter,
+    //   href: "https://x.com/Hanna16469920",
     //   color: "blue-400",
     //   label: "Twitter",
     // },
     // {
-    //   icon: instagram,
-    //   href: "https://instagram.com/yourusername",
+    //   icon: Instagram,
+    //   href: "https://www.instagram.com/tini_gracey",
     //   color: "pink-500",
     //   label: "Instagram",
     // },
     // {
-    //   icon: whatsapp,
+    //   icon: FaTiktok,
     //   href: "https://wa.me/233123456789",
     //   color: "green-600",
-    //   label: "WhatsApp",
+    //   label: "TikTok",
     // },
   ];
 
