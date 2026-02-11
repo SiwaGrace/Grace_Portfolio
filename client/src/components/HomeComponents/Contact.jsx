@@ -28,9 +28,8 @@ const Contact = () => {
       message: form.current.message.value,
     };
 
-    // deployed backend URL
-    const API_URL = import.meta.env.VITE_BACKEND_URL;
-
+    // deployed backend URL (fallback to localhost during local dev)
+    const API_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
     try {
       const response = await fetch(`${API_URL}/send-email`, {
         method: "POST",
