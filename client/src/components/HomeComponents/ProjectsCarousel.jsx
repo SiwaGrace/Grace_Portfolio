@@ -19,24 +19,24 @@ const ProjectsCarousel = () => {
         "A minimal space for deep reflection, vision tracking, and clarity. Designed for those who build.",
       websiteLink: "https://quillpad.vercel.app/",
       image: quillpad,
-      tech: ["React", "Tailwind", "Firebase"],
-      githublink: "https://github.com/SiwaGrace/Grace_Portfolio",
+      tech: ["React", "Tailwind", "Node.js/Express", "MongoDB", "JWT"],
+      githublink: "https://github.com/SiwaGrace/Quillpad",
     },
     {
       title: "Emezak Educational Consulting",
       description: "An international student consulting platform.",
       websiteLink: "https://emezakeduconsulting.com/",
       image: emezakeduconsulting,
-      tech: ["Next.js", "TypeScript", "Prisma"],
-      githublink: "https://github.com/SiwaGrace/Grace_Portfolio",
+      tech: ["HTML", "CSS", "JavaScript"],
+      githublink: "https://github.com/SiwaGrace/Emezak_Educational_Consulting",
     },
     {
       title: "ASAM Foundation",
       description: "Website for a nonprofit organization that helps the needy.",
       websiteLink: "https://asam-xi.vercel.app/",
       image: asam,
-      tech: ["React", "CSS", "Node.js"],
-      githublink: "https://github.com/SiwaGrace/Grace_Portfolio",
+      tech: ["HTML", "CSS", "JavaScript"],
+      githublink: "https://github.com/SiwaGrace/ASAM",
     },
     {
       title: "Eternal life",
@@ -44,16 +44,16 @@ const ProjectsCarousel = () => {
         "A Ghanaian not-for-profit Christian Institute specialized in Leadership Training.",
       websiteLink: "https://eternal-life-sigma.vercel.app",
       image: Projecteternal,
-      tech: ["React", "Tailwind", "Express"],
-      githublink: "https://github.com/SiwaGrace/Grace_Portfolio",
+      tech: ["HTML", "CSS", "JavaScript"],
+      githublink: "https://github.com/SiwaGrace/Eternal_Life",
     },
     {
       title: "Foresight Consult Ltd",
       description: "Accounting and IT solutions business.",
       websiteLink: "https://accounting-foresight-tweaked.vercel.app/",
       image: accountingforesight,
-      tech: ["Next.js", "MongoDB", "Stripe"],
-      githublink: "https://github.com/SiwaGrace/Grace_Portfolio",
+      tech: ["HTML", "CSS", "JavaScript"],
+      githublink: "https://github.com/SiwaGrace/Accounting_Foresight_tweaked",
     },
     // {
     //   title: "Wanderlust Voyage",
@@ -147,7 +147,7 @@ const ProjectsCarousel = () => {
                   >
                     <ExternalLink className="w-5 h-5" />
                   </a>
-                  {/* <button
+                  <button
                     className="size-10 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-pink-600 transition-colors"
                     aria-label="View project code"
                     onClick={() => {
@@ -162,9 +162,8 @@ const ProjectsCarousel = () => {
                       console.log(`View code for ${project.title}`);
                     }}
                   >
-                    
                     <Code className="w-5 h-5" />
-                  </button> */}
+                  </button>
                 </div>
               </div>
             </div>

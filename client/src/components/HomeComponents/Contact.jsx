@@ -133,7 +133,7 @@ const Contact = () => {
 
               <button
                 disabled={loading}
-                className={`w-full bg-accentColor text-white font-black uppercase tracking-widest py-5 rounded-xl mt-2 transition-all shadow-xl shadow-pink-300 dark:shadow-accentColor/30 hover:bg-[linear-gradient(135deg,#FF2D55_0%,#000000_100%)] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed`}
+                className={`w-full bg-accentColor text-white font-black uppercase tracking-widest py-5 rounded-xl mt-2 transition-all shadow-xl shadow-pink-300 dark:shadow-accentColor/30 hover:bg-[linear-gradient(135deg,#FF2D55_0%,#000000_100%)] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer`}
                 type="submit"
               >
                 {loading ? "Sending..." : "Send Message"}

@@ -17,8 +17,8 @@ const NavBar = ({ isDarkMode, toggleTheme }) => {
     { href: "about", label: "About" },
     { href: "services", label: "Services" },
     { href: "projects", label: "Projects" },
+    { href: "contact", label: "Contact" },
     // { href: "blogs", label: "Blogs" },
-    // { href: "contact", label: "Contact" },
   ];
 
   return (
