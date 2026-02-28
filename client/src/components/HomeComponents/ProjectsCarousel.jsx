@@ -1,15 +1,16 @@
 import { useRef } from "react";
 import { useScroll } from "motion/react";
-import project from "../../assets/banner.jpg";
-import emezakeduconsulting from "../../assets/Project_Emezak_Educational_Consulting.png";
-import asam from "../../assets/asam.png";
-import Projecteternal from "../../assets/Project_eternal-life.png";
-import accountingforesight from "../../assets/accounting-foresight.png";
-import quillpad from "../../assets/quillpad.png";
-import ayofitness from "../../assets/ayofitness.png";
-import wanderlustvoyage from "../../assets/wanderlust-voyage.png";
 import HeadingText from "../HeadingText";
 import { ExternalLink, Code } from "lucide-react";
+
+// Project images
+import quillpad from "../../assets/quillpad.png";
+import tabexecutive from "../../assets/Tab executive suite.png";
+import emezakeduconsulting from "../../assets/emezak-consulting.png";
+import asam from "../../assets/asam.png";
+import yourynetwork from "../../assets/yourynetwork.png";
+import eternal from "../../assets/eternal-life.png";
+import accountingforesight from "../../assets/accounting-foresight.png";
 
 const ProjectsCarousel = () => {
   const projects = [
@@ -19,15 +20,23 @@ const ProjectsCarousel = () => {
         "A minimal space for deep reflection, vision tracking, and clarity. Designed for those who build.",
       websiteLink: "https://quillpad.vercel.app/",
       image: quillpad,
-      tech: ["React", "Tailwind", "Node.js/Express", "MongoDB", "JWT"],
+      tech: ["ReactJs", "Tailwind", "Node.js/Express", "MongoDB", "JWT"],
       githublink: "https://github.com/SiwaGrace/Quillpad",
+    },
+    {
+      title: "Tab Executive Suite",
+      description: "A website for a luxury executive suite rental business.",
+      websiteLink: "https://tabexecutivesuite.com/",
+      image: tabexecutive,
+      tech: ["React Js", "Tailwind CSS", "Brevo API"],
+      githublink: "https://github.com/SiwaGrace/tab-executive-suite-website",
     },
     {
       title: "Emezak Educational Consulting",
       description: "An international student consulting platform.",
       websiteLink: "https://emezakeduconsulting.com/",
       image: emezakeduconsulting,
-      tech: ["HTML", "CSS", "JavaScript"],
+      tech: ["HTML", "CSS", "Tailwind CSS", "JavaScript"],
       githublink: "https://github.com/SiwaGrace/Emezak_Educational_Consulting",
     },
     {
@@ -35,16 +44,24 @@ const ProjectsCarousel = () => {
       description: "Website for a nonprofit organization that helps the needy.",
       websiteLink: "https://asam-xi.vercel.app/",
       image: asam,
-      tech: ["HTML", "CSS", "JavaScript"],
+      tech: ["HTML", "Tailwind CSS", "JavaScript"],
       githublink: "https://github.com/SiwaGrace/ASAM",
+    },
+    {
+      title: "YouryNetwork",
+      description: "Website for a nonprofit organization that helps the needy.",
+      websiteLink: "your-ynetwork.vercel.app",
+      image: yourynetwork,
+      tech: ["HTML", "Tailwind CSS", "JavaScript"],
+      githublink: "https://github.com/SiwaGrace/YourYnetwork",
     },
     {
       title: "Eternal life",
       description:
         "A Ghanaian not-for-profit Christian Institute specialized in Leadership Training.",
       websiteLink: "https://eternal-life-sigma.vercel.app",
-      image: Projecteternal,
-      tech: ["HTML", "CSS", "JavaScript"],
+      image: eternal,
+      tech: ["HTML", "Tailwind CSS", "JavaScript"],
       githublink: "https://github.com/SiwaGrace/Eternal_Life",
     },
     {
@@ -52,17 +69,9 @@ const ProjectsCarousel = () => {
       description: "Accounting and IT solutions business.",
       websiteLink: "https://accounting-foresight-tweaked.vercel.app/",
       image: accountingforesight,
-      tech: ["HTML", "CSS", "JavaScript"],
+      tech: ["HTML", "CSS", "Tailwind CSS", "JavaScript"],
       githublink: "https://github.com/SiwaGrace/Accounting_Foresight_tweaked",
     },
-    // {
-    //   title: "Wanderlust Voyage",
-    //   description: "Homepage for Wanderlust Voyage.",
-    //   websiteLink: "https://wanderlust-voyage.vercel.app/",
-    //   image: wanderlustvoyage,
-    //   tech: ["React", "GSAP", "Framer"],
-    // githublink: "https://github.com/SiwaGrace/Grace_Portfolio",
-    // },
   ];
 
   const carouselRef = useRef(null);
