@@ -11,16 +11,26 @@ import asam from "../../assets/asam.png";
 import yourynetwork from "../../assets/yourynetwork.png";
 import eternal from "../../assets/eternal-life.png";
 import accountingforesight from "../../assets/accounting-foresight.png";
+import kreditsu from "../../assets/kreditsu.png";
 
 const ProjectsCarousel = () => {
   const projects = [
+    {
+      title: "Kreditsu",
+      description:
+        "A digital identity platform that allows SMEs to create branded mini business profiles online.",
+      websiteLink: "https://kreditsu-web.vercel.app/",
+      image: kreditsu,
+      tech: ["ReactJs", "Tailwind CSS", "Laravel", "MySQL", "Laravel Sanctum"],
+      githublink: "https://github.com/SiwaGrace/kreditsu-web",
+    },
     {
       title: "Quillpad",
       description:
         "A minimal space for deep reflection, vision tracking, and clarity. Designed for those who build.",
       websiteLink: "https://quillpad.vercel.app/",
       image: quillpad,
-      tech: ["ReactJs", "Tailwind", "Node.js/Express", "MongoDB", "JWT"],
+      tech: ["ReactJs", "Tailwind CSS", "Node.js/Express", "MongoDB", "JWT"],
       githublink: "https://github.com/SiwaGrace/Quillpad",
     },
     {
