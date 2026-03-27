@@ -5,7 +5,7 @@ import { ExternalLink, Code } from "lucide-react";
 
 // Project images
 import quillpad from "../../assets/quillpad.png";
-import tabexecutive from "../../assets/Tab executive suite.png";
+import tabexecutive from "../../assets/tabexecutivesuite.png";
 import emezakeduconsulting from "../../assets/emezak-consulting.png";
 import asam from "../../assets/asam.png";
 import yourynetwork from "../../assets/yourynetwork.png";
