@@ -10,8 +10,7 @@ import {
   // whatsapp,
 } from "lucide-react";
 import { FaLinkedin, FaTiktok } from "react-icons/fa";
-import mypicture from "../../assets/mypicture.png";
-
+import mypicture from "../../assets/siwad.png";
 const About = () => {
   const contactLinks = [
     // {
