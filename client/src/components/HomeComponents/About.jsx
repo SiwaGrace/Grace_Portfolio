@@ -10,9 +10,9 @@ import {
   // whatsapp,
 } from "lucide-react";
 import { FaLinkedin, FaTiktok } from "react-icons/fa";
-import myPicture from "../../assets/mypicture.png";
-// import myPicture from "../../assets/mine.jpg";
-// import myPicture from "../../assets/whitebg.png";
+import mypicture from "../../assets/mypicture.png";
+// import mypicture from "../../assets/mine.jpg";
+// import mypicture from "../../assets/whitebg.png";
 
 const About = () => {
   const contactLinks = [
@@ -152,7 +152,7 @@ const About = () => {
               />
 
               <image
-                href={myPicture}
+                href={mypicture}
                 width="200"
                 height="300"
                 clipPath="url(#blobClip)"
