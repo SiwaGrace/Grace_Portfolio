@@ -5,10 +5,13 @@ import { ExternalLink, Code } from "lucide-react";
 
 // Project images
 import quillpad from "../../assets/quillpad.png";
-import tabexecutive from "../../assets/tabexecutivesuite.png";
+// import tabexecutive from "../../assets/tabexecutivesuite.png";
+import tabexecutive from "../../assets/ecutivesuite.png";
 import emezakeduconsulting from "../../assets/emezak-consulting.png";
 import asam from "../../assets/asam.png";
-import yourynetwork from "../../assets/yourynetwork.png";
+// change later
+// import yourynetwork from "../../assets/yourynetwork.png";
+import yourynetwork from "../../assets/network.png";
 import eternal from "../../assets/eternal-life.png";
 import accountingforesight from "../../assets/accounting-foresight.png";
 import kreditsu from "../../assets/kreditsu.png";
