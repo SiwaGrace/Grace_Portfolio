@@ -58,6 +58,16 @@
   --dividerBorder: #c41616;
 }
 
+/* Dark Theme */
+.dark {
+  --primaryColor: #000000;
+  --secondaryColor: #6d1b7b; /**/
+  --accentColor: #ee2b8c;
+  --primaryText: #ffffff;
+  --secondaryText: #a1a1aa; /*f2f2f2*/
+  --dividerBorder: #333333;
+}
+
 /* Light Theme (default) is this even neccessary? color in root and dark seem enough */
 @theme {
   --color-primaryColor: var(--primaryColor); /* background */
@@ -69,15 +79,6 @@
 
   /* font */
   --font-fontHeading: var(--fontHeading);
-}
-/* Dark Theme */
-.dark {
-  --primaryColor: #000000;
-  --secondaryColor: #6d1b7b; /**/
-  --accentColor: #ee2b8c;
-  --primaryText: #ffffff;
-  --secondaryText: #a1a1aa; /*f2f2f2*/
-  --dividerBorder: #333333;
 }
 
 body {

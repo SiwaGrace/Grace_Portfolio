@@ -1,92 +1,14 @@
 import { useRef } from "react";
+import { Link as RouterLink } from "react-router-dom";
 import { useScroll } from "motion/react";
 import HeadingText from "../HeadingText";
 import { ExternalLink, Code } from "lucide-react";
 
-// Project images
-import quillpad from "../../assets/quillpad.png";
-// import tabexecutive from "../../assets/tabexecutivesuite.png";
-import tabexecutive from "../../assets/ecutivesuite.png";
-import emezakeduconsulting from "../../assets/emezak-consulting.png";
-import asam from "../../assets/asam.png";
-// change later
-// import yourynetwork from "../../assets/yourynetwork.png";
-import yourynetwork from "../../assets/network.png";
-import eternal from "../../assets/eternal-life.png";
-import accountingforesight from "../../assets/accounting-foresight.png";
-import kreditsu from "../../assets/kreditsu.png";
+import data from "../../lib/projects.json";
 
 const ProjectsCarousel = () => {
-  const projects = [
-    {
-      title: "Kreditsu",
-      description:
-        "A digital identity platform that allows SMEs to create branded mini business profiles online.",
-      websiteLink: "https://kreditsu-web.vercel.app/",
-      image: kreditsu,
-      tech: ["ReactJs", "Tailwind CSS", "Laravel", "MySQL", "Laravel Sanctum"],
-      githublink: "https://github.com/SiwaGrace/kreditsu-web",
-    },
-    {
-      title: "Quillpad",
-      description:
-        "A minimal space for deep reflection, vision tracking, and clarity. Designed for those who build.",
-      websiteLink: "https://quillpad.vercel.app/",
-      image: quillpad,
-      tech: ["ReactJs", "Tailwind CSS", "Node.js/Express", "MongoDB", "JWT"],
-      githublink: "https://github.com/SiwaGrace/Quillpad",
-    },
-    {
-      title: "Tab Executive Suite",
-      description: "A website for a luxury executive suite rental business.",
-      websiteLink: "https://tabexecutivesuite.com/",
-      image: tabexecutive,
-      tech: ["React Js", "Tailwind CSS", "Brevo API"],
-      githublink: "https://github.com/SiwaGrace/tab-executive-suite-website",
-    },
-    {
-      title: "Emezak Educational Consulting",
-      description: "An international student consulting platform.",
-      websiteLink: "https://emezakeduconsulting.com/",
-      image: emezakeduconsulting,
-      tech: ["HTML", "CSS", "Tailwind CSS", "JavaScript"],
-      githublink: "https://github.com/SiwaGrace/Emezak_Educational_Consulting",
-    },
-    {
-      title: "ASAM Foundation",
-      description: "Website for a nonprofit organization that helps the needy.",
-      websiteLink: "https://asam-xi.vercel.app/",
-      image: asam,
-      tech: ["HTML", "Tailwind CSS", "JavaScript"],
-      githublink: "https://github.com/SiwaGrace/ASAM",
-    },
-    {
-      title: "YouryNetwork",
-      description: "Website for a nonprofit organization that helps the needy.",
-      websiteLink: "your-ynetwork.vercel.app",
-      image: yourynetwork,
-      tech: ["HTML", "Tailwind CSS", "JavaScript"],
-      githublink: "https://github.com/SiwaGrace/YourYnetwork",
-    },
-    {
-      title: "Eternal life",
-      description:
-        "A Ghanaian not-for-profit Christian Institute specialized in Leadership Training.",
-      websiteLink: "https://eternal-life-sigma.vercel.app",
-      image: eternal,
-      tech: ["HTML", "Tailwind CSS", "JavaScript"],
-      githublink: "https://github.com/SiwaGrace/Eternal_Life",
-    },
-    {
-      title: "Foresight Consult Ltd",
-      description: "Accounting and IT solutions business.",
-      websiteLink: "https://accounting-foresight-tweaked.vercel.app/",
-      image: accountingforesight,
-      tech: ["HTML", "CSS", "Tailwind CSS", "JavaScript"],
-      githublink: "https://github.com/SiwaGrace/Accounting_Foresight_tweaked",
-    },
-  ];
-
+  const allData = data.data;
+  const projects = allData.slice(0, 5);
   const carouselRef = useRef(null);
   const { scrollX } = useScroll({
     container: carouselRef,
@@ -191,6 +113,15 @@ const ProjectsCarousel = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="mt-6 flex justify-end">
+        <RouterLink
+          to="/projects"
+          className="inline-flex items-center gap-2 rounded-full bg-accentColor px-5 py-3 text-sm font-semibold text-white transition hover:bg-pink-500"
+        >
+          More projects
+          <span aria-hidden="true">→</span>
+        </RouterLink>
       </div>
     </section>
   );

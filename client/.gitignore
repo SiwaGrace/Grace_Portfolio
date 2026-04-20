@@ -26,3 +26,4 @@ dist-ssr
 .env
 /src/assets/worksamples
 /src/assets/projects.txt
+.early.coverage
