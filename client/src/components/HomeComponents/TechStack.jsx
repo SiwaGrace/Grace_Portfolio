@@ -9,6 +9,7 @@ import {
   CodeXml,
   Braces,
   Leaf,
+  ChevronsLeftRightEllipsis,
 } from "lucide-react";
 
 const TechStack = () => {
@@ -42,6 +43,16 @@ const TechStack = () => {
       name: "React",
       icon: <Atom className={`${iconStyles.iconbase}`} size={size} />,
       label: "React",
+    },
+    {
+      name: "Next.js",
+      icon: (
+        <ChevronsLeftRightEllipsis
+          className={`${iconStyles.iconbase}`}
+          size={size}
+        />
+      ),
+      label: "Next.js",
     },
     {
       name: "Node.js",
