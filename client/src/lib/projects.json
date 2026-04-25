@@ -25,7 +25,6 @@
     {
       "title": "Kreditsu",
       "description": "A digital identity platform that allows SMEs to create branded mini business profiles online.",
-      "websiteLink": "https://kreditsu-web.vercel.app/",
       "image": "/projects/kreditsu.png",
       "tech": [
         "ReactJs",

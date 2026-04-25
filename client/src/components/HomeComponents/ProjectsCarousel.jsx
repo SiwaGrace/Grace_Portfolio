@@ -14,6 +14,10 @@ const ProjectsCarousel = () => {
     container: carouselRef,
   });
 
+  const formatUrl = (url) => {
+    if (!url) return "";
+    return url.startsWith("http") ? url : `https://${url}`;
+  };
   return (
     <section id="projects" className="mt-10 py-12 px-4">
       <HeadingText
@@ -78,36 +82,33 @@ const ProjectsCarousel = () => {
 
                 {/* Action Buttons - appear on hover */}
                 <div className="flex gap-4 sm:opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
-                  <a
-                    href={
-                      project.websiteLink.startsWith("http")
-                        ? project.websiteLink
-                        : `https://${project.websiteLink}`
-                    }
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="size-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-pink-600 hover:text-white transition-colors"
-                    aria-label={`Visit ${project.title} website`}
-                  >
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
-                  <button
-                    className="size-10 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-pink-600 transition-colors"
-                    aria-label="View project code"
-                    onClick={() => {
-                      if (project.githublink) {
+                  {project.websiteLink && (
+                    <a
+                      href={formatUrl(project.websiteLink)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="size-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-pink-600 hover:text-white transition-colors"
+                      aria-label={`Visit ${project.title} website`}
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                  )}
+
+                  {project.githublink && (
+                    <button
+                      className="size-10 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-pink-600 transition-colors"
+                      aria-label="View project code"
+                      onClick={() => {
                         window.open(
                           project.githublink,
                           "_blank",
                           "noopener,noreferrer",
                         );
-                        console.log(`View code for ${project.title}`);
-                      }
-                      console.log(`View code for ${project.title}`);
-                    }}
-                  >
-                    <Code className="w-5 h-5" />
-                  </button>
+                      }}
+                    >
+                      <Code className="w-5 h-5" />
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
